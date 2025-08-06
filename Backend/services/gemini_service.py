@@ -11,7 +11,7 @@ load_dotenv()
 # OBTENER API LEY
 
 try:
-    gemini_api_key = os.environ['GEMINI_API_KEY']
+    gemini_api_key = os.getenv('GEMINI_API_KEY')
 except Exception as e:
     raise e
 
