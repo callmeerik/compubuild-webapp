@@ -10,6 +10,7 @@ class AmazonProducts(BaseModel):
     title: str
     price: str | None = None
     link: str
+    image: str
 
 class FinalResponse(BaseModel):
     components: dict
