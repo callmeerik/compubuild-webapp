@@ -16,11 +16,15 @@ def create_recommendation( userRequest: UserInput ):
     """
     global recommendation
     try:
-        gemini_data = get_ai_recommendation( userRequest )
+        gemini_data = get_ai_recommendation( 
+            userRequest.profession,
+            userRequest.device,
+            userRequest.activity
+         )
 
         # almacenamiento de la recomendacion
         recommendation = gemini_data
-
+        print(recommendation)
         return JSONResponse(
             content='Recomendación realizada con exito',
             status_code= 201
@@ -46,11 +50,10 @@ def get_information():
     
     try:
         response = get_amazon_products( recommendation['frase_clave'] )
-
         return FinalResponse(
             components= recommendation['componentes'],
             reason= recommendation['motivo'],
-            similar_products= [ response ]
+            similar_products= response 
         )
     except Exception as e:
         raise HTTPException(

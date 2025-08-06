@@ -43,8 +43,9 @@ def get_ai_recommendation( profession:str, device: str, activity: str ):
         "componentes"
         "motivo"
         "frase_clave"
-        Dentro de componenetes deberas colocar cada componentes un solo
-          nombre por componeentes.Si el tipo de dispositivo es desktop, debes
+        Dentro de componenetes deberas poner un json con componete: nombre compoente, 
+        un unico nombre por componente-
+        Si el tipo de dispositivo es desktop, debes
           añadir, gabinete, psu y ventilacion. En motivo una breve explicacion del por 
           que esos componentes son idoneos para dicho uso. Y en frase_clave
           debes crear una frase clave con los componenetes para buscar productos
@@ -53,19 +54,20 @@ def get_ai_recommendation( profession:str, device: str, activity: str ):
     
     
     # config de gemini
-    client = genai.Client( gemini_api_key )
+    client = genai.Client( api_key=gemini_api_key )
     model_name = 'gemini-2.5-flash'
 
     response = client.models.generate_content(
         model= model_name,
         contents= prompt,
-        config= types.GenerateContentConfig(
-            max_output_tokens= 200 #limitacion del numero de tokens de salida
-        )
     )
 
+    if not response or not response.text:
+        raise Exception('Gemini no da una respuesta')
+
     # limpiar el texto para obtener solo el json
-    resp_txt = response.text.strip()
+    resp_txt = response.text
+
     if resp_txt.startswith('```json'):
         resp_txt = resp_txt[7 : -3]
 

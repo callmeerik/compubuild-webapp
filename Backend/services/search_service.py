@@ -35,7 +35,7 @@ def get_amazon_products( query ):
             products.append( 
                 AmazonProducts(
                     title= item['title'],
-                    price= item['price'] if item['price'] else None,
+                    price= item['price'],
                     link= item['link'],
                     image= item['thumbnail']
                 )
