@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #000;
+}
+
+/*HEADER*/
+
+.main-header {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.main-header h1 {
+    font-size: 2.7rem;
+    color: transparent;
+    font-weight: 800;
+    background: linear-gradient(to right, #43c6ac, #f8ffae); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.main-header h3 {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    margin-left: 30px;
+    letter-spacing: 2px;   
+}
+
+/* Formulario */
+.form {
+    width: 70%;
+    margin: auto;
+    container-type: inline-size;
+    container-name: form;
+}
+
+.form-recommendation {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-group input,
+.form-group select {
+    color: #fff;
+    padding: 8px;
+    height: 40px;
+    margin-top: 10px;
+    outline: none;
+    border-image: linear-gradient(to right, #43c6ac, #f8ffae) 1; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 20px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-image: linear-gradient(90deg, #7effc1, #8be9fd, #ffc371, #ff5f6d) 1;
+}
+
+.btn {
+    display: block;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    background: linear-gradient(to right, #43c6ac, #f8ffae);
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* RECOMENDACION */
+.recommendation {
+    width: 95%;
+    margin: 30px auto;
+    padding: 30px;
+    container-type: inline-size;
+    container-name: recommendation;
+}
+
+.recommendation h2 {
+    background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: transparent;
+    background-clip: text;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.recommendation .content-wrapper {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.suggestion {
+    width: 35%;
+    text-wrap: wrap;
+}
+
+.suggestion h3 {
+    text-align: center;
+}
+
+.components-wrapper {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.item {
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+    margin-top: 10px;
+    padding: 15px;
+    border-left: 4px solid rgb(15, 231, 156);
+    transition: all 0.5s ease-in-out;
+}
+
+.item:hover {
+     background-color: rgba(8, 255, 193, 0.217);
+      border-left: 4px solid rgb(255, 255, 255);
+}
+
+.item span {
+    background-color: transparent;
+    font-weight: 700;
+    font-weight: 1.3em;
+}
+
+.reason {
+    width: 60%;
+}
+
+.reason h3 {
+    text-align: center;
+}
+
+.reason-text {
+    margin-top: 40px;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* PRODUCTOS SIMILARES */
+
+.products-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products h2 {
+    background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: transparent;
+    background-clip: text;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.card {
+    background: #9e1515;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.estimated_price span {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #10fc9e;
+}
+
+.estimated_price {
+    font-size: 1.6rem;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #516c91;
+    margin: 0;
+    height: 50px;
+    line-height: 1.4;
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #059669;
+    margin: 0;
+}
+
+.card-body a {
+    display: inline-block;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.card-body a:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.card-body a:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
+    
+    .product-title {
+        font-size: 1rem;
+    }
+    
+    .product-price {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .card-img {
+        height: 200px;
+    }
+}
+
+@container form (max-width: 690px) {
+    .form {
+        width: 98%;
+    }
+
+    .form-recommendation {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100% ;
+    }
+}
+
+@container recommendation ( max-width: 690px ) {
+    .recommendation .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .suggestion {
+        width: 98%;
+    }
+
+    .reason {
+        width: 98%;
+        margin-top: 40px;
+    }
+
+    .reason-text {
+        margin-top: 20px;
+    }
+}

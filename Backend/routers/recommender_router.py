@@ -50,9 +50,11 @@ def get_information():
     
     try:
         response = get_amazon_products( recommendation['frase_clave'] )
+        print(response)
         return FinalResponse(
             components= recommendation['componentes'],
             reason= recommendation['motivo'],
+            estimated_price= recommendation['precio_estimado'],
             similar_products= response 
         )
     except Exception as e:

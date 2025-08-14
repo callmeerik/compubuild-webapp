@@ -8,7 +8,7 @@ from models.models import AmazonProducts
 load_dotenv()
 
 try:
-    search_api_key = os.getenv('SEARCHAP_API_KEY')
+    search_api_key = os.getenv('SEARCHAPI_API_KEY')
 except Exception as e:
     raise e
 
@@ -28,7 +28,7 @@ def get_amazon_products( query ):
     
     response = requests.get( url, params= params )
     data = response.json()
-
+    print(data)
     products = []
     if 'organic_results' in data:
         for item in data['organic_results']:

@@ -15,4 +15,5 @@ class AmazonProducts(BaseModel):
 class FinalResponse(BaseModel):
     components: dict
     reason: str
+    estimated_price: str
     similar_products: List[AmazonProducts]

@@ -39,17 +39,18 @@ def get_ai_recommendation( profession:str, device: str, activity: str ):
         - dispositivo: {device}
         - uso del pc: {activity}-
 
-        Como respuesta deberás retornar un objeto JSON con las siguientes claves
-        "componentes"
-        "motivo"
+        Como respuesta deberas dar un objeto json con las siguientes claves:
+        "componentes",
+        "motivo",
+        "precio_estimado"
         "frase_clave"
-        Dentro de componenetes deberas poner un json con componete: nombre compoente, 
-        un unico nombre por componente-
-        Si el tipo de dispositivo es desktop, debes
-          añadir, gabinete, psu y ventilacion. En motivo una breve explicacion del por 
-          que esos componentes son idoneos para dicho uso. Y en frase_clave
-          debes crear una frase clave con los componenetes para buscar productos
-          en Amazon
+        Dentro de componenetes otro objeto json con: cpu, ssd, hdd, gpu, ram.
+        Si es tipo de dispositivo es desktop debes añadir psu, case y ventilacion.
+        En los componentes debes colocar un solo nombre por componente, 
+        recuerda solo uno.
+        El motivo una breve descripcion del porque esos compoenentes son ideales para
+        la tarea descrita. Y en frase_clave una frase corta con los compoentes
+        para poder buscar productos similares en Amazon.
     """
     
     

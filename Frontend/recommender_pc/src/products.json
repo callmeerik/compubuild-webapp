@@ -1,0 +1,51 @@
+{
+    "components": {
+        "CPU": "Intel Core i7-13700K",
+        "GPU": "NVIDIA GeForce RTX 3050",
+        "RAM": "32GB DDR5 (2x16GB) 5600MHz",
+        "Almacenamiento": "1TB NVMe PCIe Gen4 SSD",
+        "Placa Base": "Intel Z790",
+        "PSU": "750W 80+ Gold",
+        "Gabinete": "Mid-Tower ATX con buen flujo de aire",
+        "Ventilacion": "Sistema de Refrigeración Líquida (AIO) 240/280mm para CPU + 3 Ventiladores de Gabinete"
+    },
+    "reason": "Para un profesor de matemáticas que realiza modelos con R, la **CPU** y la **RAM** son los pilares fundamentales. El **Intel Core i7-13700K** ofrece un excelente balance entre alta frecuencia (importante para las operaciones de R de un solo hilo) y un buen número de núcleos (beneficioso para paquetes que usan procesamiento paralelo), lo que lo hace idóneo para cálculos matemáticos intensivos. Los **32GB de RAM DDR5** son cruciales para manejar grandes conjuntos de datos en memoria, evitando el cuello de botella cuando R carga o manipula matrices y tablas voluminosas. Un **SSD NVMe PCIe Gen4** de 1TB garantiza tiempos de carga ultrarrápidos para el sistema operativo, RStudio, librerías y, lo que es más importante, para sus datasets, mejorando drásticamente la fluidez de trabajo. La **NVIDIA GeForce RTX 3050**, si bien R no es inherentemente dependiente de la GPU para la mayoría de los modelos básicos, es más que suficiente para la visualización, el manejo de múltiples monitores y ofrece potencial para librerías futuras o específicas que puedan aprovechar la aceleración CUDA. La **Placa Base Intel Z790** asegura la compatibilidad y el rendimiento óptimo de la CPU y la RAM. Finalmente, la **PSU de 750W 80+ Gold** proporciona la energía estable y eficiente necesaria, y un **gabinete Mid-Tower** junto con un **sistema de refrigeración líquida (AIO)** y **ventiladores de gabinete** son vitales para mantener las temperaturas bajo control durante sesiones de cálculo prolongadas, asegurando la estabilidad y longevidad de todos los componentes.",
+    "similar_products": [
+        {
+            "title": "The Horizon Ultra I7 RTX Gaming Dragon Desktop PC || i7 E5-2699V3 18-Core || RTX 4060 || 32GB RAM || SSD + 2TB HHD || 650 W 80+ Gold Power Supply || 1200 Mbps WiFi Ready || Windows 11 Pro",
+            "price": "$1,129.99",
+            "link": "https://www.amazon.com/Horizon-Desktop-E5-2699V3-18-Core-Windows/dp/B0DVMN21TQ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.gM-o3NetP16YtLNYzgp-XKmh98AFq6hifJfUp3C0nMOj0LAhLz2-ypWr_QXI_7KhHmTaTgoVsG8lJ0f1Q3WvWSX5t_yWeQYMuaOjMmvkpPHAg_JfNwoQhTllQ-vPMXAz7Sg0y5-c_85kVCy7nB37JgiQ3n1Fxico2qd-lEW0bB1XFy7RGxPjUXzBeDiRMPPatXFUBPTqAM_0QP435d3yu2NBRvMK1SJZX59a-6jHhM8.1Xx99kqvg4hBgVnRP4-OVxBOqTeUnj67CtJ7HmEpt3Q&dib_tag=se&keywords=PC+Desktop+R+Modelado+Matematico+Intel+i7+13700K+32GB+RAM+RTX+3050+NVMe&qid=1754590790&sr=8-1",
+            "image": "https://m.media-amazon.com/images/I/81XAb32wLfL._AC_UY218_.jpg"
+        },
+        {
+            "title": "Centaurus Helios 3 Gaming PC, Intel i7 12700K, GeForce RTX 4060, 32GB RAM, 1TB NVMe SSD, Windows 11 PRO, AC WiFi. Fast Desktop Computer for Gamers and Professional apps, VR Ready, RGB, Glass Window!",
+            "price": "$1,289.99",
+            "link": "https://www.amazon.com/Centaurus-Helios-Gaming-Computer-Windows/dp/B077BQHVRQ/ref=sr_1_2?dib=eyJ2IjoiMSJ9.gM-o3NetP16YtLNYzgp-XKmh98AFq6hifJfUp3C0nMOj0LAhLz2-ypWr_QXI_7KhHmTaTgoVsG8lJ0f1Q3WvWSX5t_yWeQYMuaOjMmvkpPHAg_JfNwoQhTllQ-vPMXAz7Sg0y5-c_85kVCy7nB37JgiQ3n1Fxico2qd-lEW0bB1XFy7RGxPjUXzBeDiRMPPatXFUBPTqAM_0QP435d3yu2NBRvMK1SJZX59a-6jHhM8.1Xx99kqvg4hBgVnRP4-OVxBOqTeUnj67CtJ7HmEpt3Q&dib_tag=se&keywords=PC+Desktop+R+Modelado+Matematico+Intel+i7+13700K+32GB+RAM+RTX+3050+NVMe&qid=1754590790&sr=8-2",
+            "image": "https://m.media-amazon.com/images/I/41EPMBn+MNL._AC_UY218_.jpg"
+        },
+        {
+            "title": "Y40 PRO Black Gaming PC Desktop Computer AMD Ryzen 7 7800X3D CPU, NVIDIA GeForce RTX 5070 12GB GPU, 32GB DDR5 RGB 5200MHz RAM, 2TB NVMe SSD, Windows 11 Home, Keyboard, Mouse - Y40BA7N5702",
+            "price": "$1,699.99",
+            "link": "https://www.amazon.com/iBUYPOWER-Desktop-Computer-7800X3D-Keyboard/dp/B0DYDFGJ8X/ref=sr_1_3?dib=eyJ2IjoiMSJ9.gM-o3NetP16YtLNYzgp-XKmh98AFq6hifJfUp3C0nMOj0LAhLz2-ypWr_QXI_7KhHmTaTgoVsG8lJ0f1Q3WvWSX5t_yWeQYMuaOjMmvkpPHAg_JfNwoQhTllQ-vPMXAz7Sg0y5-c_85kVCy7nB37JgiQ3n1Fxico2qd-lEW0bB1XFy7RGxPjUXzBeDiRMPPatXFUBPTqAM_0QP435d3yu2NBRvMK1SJZX59a-6jHhM8.1Xx99kqvg4hBgVnRP4-OVxBOqTeUnj67CtJ7HmEpt3Q&dib_tag=se&keywords=PC+Desktop+R+Modelado+Matematico+Intel+i7+13700K+32GB+RAM+RTX+3050+NVMe&qid=1754590790&sr=8-3",
+            "image": "https://m.media-amazon.com/images/I/81Di+lzv5SL._AC_UY218_.jpg"
+        },
+        {
+            "title": "Vostro 3030 Tower Desktop Computer, Intel Core i7-12700K, 32GB RAM, 1TB NVMe SSD, Intel UHD 770 Graphics, Wi-Fi, Bluetooth, Windows 11 Pro, Black",
+            "price": "$899.99",
+            "link": "https://www.amazon.com/Dell-3030-Computer-i7-12700K-Bluetooth/dp/B0DNGNQ921/ref=sr_1_4?dib=eyJ2IjoiMSJ9.gM-o3NetP16YtLNYzgp-XKmh98AFq6hifJfUp3C0nMOj0LAhLz2-ypWr_QXI_7KhHmTaTgoVsG8lJ0f1Q3WvWSX5t_yWeQYMuaOjMmvkpPHAg_JfNwoQhTllQ-vPMXAz7Sg0y5-c_85kVCy7nB37JgiQ3n1Fxico2qd-lEW0bB1XFy7RGxPjUXzBeDiRMPPatXFUBPTqAM_0QP435d3yu2NBRvMK1SJZX59a-6jHhM8.1Xx99kqvg4hBgVnRP4-OVxBOqTeUnj67CtJ7HmEpt3Q&dib_tag=se&keywords=PC+Desktop+R+Modelado+Matematico+Intel+i7+13700K+32GB+RAM+RTX+3050+NVMe&qid=1754590790&sr=8-4",
+            "image": "https://m.media-amazon.com/images/I/51l+RWJBq8L._AC_UY218_.jpg"
+        },
+        {
+            "title": "Vostro Tower Desktop Computer, Intel Core i7-12700KF, 32GB RAM, 1TB NVMe SSD,Nvidia Quadro P1000 4GB, DisplayPort, HDMI, Wi-Fi, Bluetooth, Windows 11 Pro, Black",
+            "price": "$1,099.99",
+            "link": "https://www.amazon.com/Dell-Computer-i7-12700KF-DisplayPort-Bluetooth/dp/B0F711Y5SN/ref=sr_1_5?dib=eyJ2IjoiMSJ9.gM-o3NetP16YtLNYzgp-XKmh98AFq6hifJfUp3C0nMOj0LAhLz2-ypWr_QXI_7KhHmTaTgoVsG8lJ0f1Q3WvWSX5t_yWeQYMuaOjMmvkpPHAg_JfNwoQhTllQ-vPMXAz7Sg0y5-c_85kVCy7nB37JgiQ3n1Fxico2qd-lEW0bB1XFy7RGxPjUXzBeDiRMPPatXFUBPTqAM_0QP435d3yu2NBRvMK1SJZX59a-6jHhM8.1Xx99kqvg4hBgVnRP4-OVxBOqTeUnj67CtJ7HmEpt3Q&dib_tag=se&keywords=PC+Desktop+R+Modelado+Matematico+Intel+i7+13700K+32GB+RAM+RTX+3050+NVMe&qid=1754590790&sr=8-5",
+            "image": "https://m.media-amazon.com/images/I/61SSlRmuUiL._AC_UY218_.jpg"
+        },
+        {
+            "title": "Pro DP180 Desktop: Intel Core i7-13700F, NVIDIA GeForce RTX 4060, 32GB Memory, 2TB NVMe SSD, WiFi 6E, Win 11 Pro: Black 13NUC-232US",
+            "price": "$1,894.78",
+            "link": "https://www.amazon.com/PRO-DP180-13NUC-232US-Business-Desktop/dp/B0CST3ZQ21/ref=sr_1_6?dib=eyJ2IjoiMSJ9.gM-o3NetP16YtLNYzgp-XKmh98AFq6hifJfUp3C0nMOj0LAhLz2-ypWr_QXI_7KhHmTaTgoVsG8lJ0f1Q3WvWSX5t_yWeQYMuaOjMmvkpPHAg_JfNwoQhTllQ-vPMXAz7Sg0y5-c_85kVCy7nB37JgiQ3n1Fxico2qd-lEW0bB1XFy7RGxPjUXzBeDiRMPPatXFUBPTqAM_0QP435d3yu2NBRvMK1SJZX59a-6jHhM8.1Xx99kqvg4hBgVnRP4-OVxBOqTeUnj67CtJ7HmEpt3Q&dib_tag=se&keywords=PC+Desktop+R+Modelado+Matematico+Intel+i7+13700K+32GB+RAM+RTX+3050+NVMe&qid=1754590790&sr=8-6",
+            "image": "https://m.media-amazon.com/images/I/5146+opr05L._AC_UY218_.jpg"
+        }
+    ]
+}
