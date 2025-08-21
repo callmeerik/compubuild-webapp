@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
+
 # carga de la variable de entorno de la api de gemini
 load_dotenv()
 

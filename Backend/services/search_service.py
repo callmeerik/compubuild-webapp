@@ -1,43 +1,57 @@
-import json
-import os
 import requests
-from dotenv import load_dotenv
-from models.models import AmazonProducts
+import os
 
-# cargar api
-load_dotenv()
-
-try:
-    search_api_key = os.getenv('SEARCHAPI_API_KEY')
-except Exception as e:
-    raise e
-
-def get_amazon_products( query ):
+def get_amazon_products(query: str):
     """
-        Metodo para llamar a la API de SearAPI
-        Parametros
-            - query: frase clave de gemini API
-        retorna: un objeto JSON con productos de AMazon
+    Busca productos en Amazon y devuelve una lista de productos simplificada.
     """
-    url = "https://www.searchapi.io/api/v1/search"
+    search_api_url = "https://www.searchapi.io/api/v1/search"
+    api_key = os.getenv("SEARCHAPI_API_KEY")
+
+    # verificacion existencia de api
+    if not api_key:
+        print("La variable de entorno SEARCH_API_KEY no está configurada.")
+        return []
+
     params = {
-        "api_key": search_api_key,
-        'engine': 'amazon_search',
-        'q': query
+        "engine": "amazon_search",
+        "q": query,
+        "api_key": api_key
     }
-    
-    response = requests.get( url, params= params )
-    data = response.json()
-    print(data)
-    products = []
-    if 'organic_results' in data:
-        for item in data['organic_results']:
-            products.append( 
-                AmazonProducts(
-                    title= item['title'],
-                    price= item['price'],
-                    link= item['link'],
-                    image= item['thumbnail']
-                )
-            )
-    return products[:6]  # limitacion de 6 productos por recomendacion
+
+    try:
+        response = requests.get(search_api_url, params=params)
+        response.raise_for_status()
+        data = response.json() # formato estructura diccionario de python
+
+        # obtine el diccionario organic_results, si no hay retorna lista vacia
+        organic_results = data.get('organic_results', [])
+
+        simplified_products = []
+        # Añadir una verificación de tipo para cada item en el bucle
+        for product in organic_results:
+            if isinstance(product, dict):
+                # Usar .get() de forma segura solo si es un diccionario
+                title = product.get('title', 'Título no disponible')
+                image = product.get('thumbnail', 'URL de imagen no disponible')
+                price = product.get('price', 'Precio no disponible')
+                link = product.get('link', '#')
+
+                simplified_products.append({
+                    "title": title,
+                    "image": image,
+                    "price": price,
+                    "link": link
+                })
+            else:
+                # en caso de que el formato de un producto no sea diccionario
+                print(f"Formato de producto inesperado, saltando: {product}")
+        
+        return simplified_products
+
+    except requests.exceptions.RequestException as e:
+        print(f"Error en la petición a SearchAPI: {e}")
+        return []
+    except Exception as e:
+        print(f"Ocurrió un error al procesar la respuesta de Amazon: {e}")
+        return []

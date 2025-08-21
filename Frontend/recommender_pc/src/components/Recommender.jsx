@@ -1,37 +1,32 @@
-import { useState } from 'react'
-import { postData, fetchData } from '../utils/useApi'
-import { RecommenderContext } from '../context/RecommenderContext'
+import { useState } from 'react';
+import { postData } from '../utils/useApi'; // Ya no necesitas fetchData aquí
+import { RecommenderContext } from '../context/RecommenderContext';
 
-const RecommenderProvider = ( {children} ) => {
-    const [recommendation, setRecommendation] = useState(null)
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(null)
+const RecommenderProvider = ({ children }) => {
+    const [recommendation, setRecommendation] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
-    // metodo para crear recomendacion y productos
     const createSuggestion = async (userData) => {
         try {
-            setLoading(true)
-            await postData( userData )
-            await getSuggestion()
-            setLoading(false)
+            setLoading(true);
+            setError(null);
+
+            const newRecommendation = await postData(userData);
+            setRecommendation(newRecommendation);
+            
         } catch (err) {
-            setError( err.response?.data?.detail || 'Error al crear la ugerencia' )
+            // Manejo de errores simplificado
+            setError(err.response?.data?.detail || 'Error al crear la sugerencia');
+            setRecommendation(null);
+        } finally {
+            // Asegúrate de apagar el estado de carga
+            setLoading(false);
         }
     }
 
-    const getSuggestion = async () => {
-        try {
-            setError(null)
-            const resp = await fetchData()
-            await new Promise((resolve) => setTimeout(resolve, 500));
-            setRecommendation( resp.data )
-            setLoading(false)
-        } catch (err) {
-            setError(err.response?.data?.detail || 'Error al obtener la sugerencia')
-        }       
-    }
-
-    // return context provider
+    // Ya no necesitas la función getSuggestion porque la data se obtiene en el POST
+    
     return (
         <RecommenderContext.Provider
             value={{
@@ -41,9 +36,9 @@ const RecommenderProvider = ( {children} ) => {
                 createSuggestion
             }}
         >
-            { children }
+            {children}
         </RecommenderContext.Provider>
     )
 }
 
-export default RecommenderProvider
+export default RecommenderProvider;

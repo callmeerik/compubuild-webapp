@@ -1,6 +1,5 @@
 import { useState, useContext } from "react"
 import { RecommenderContext } from "../context/RecommenderContext"
-import Button from "./Button"
 
 const Form = () => {
 
@@ -31,7 +30,7 @@ const Form = () => {
     } 
   return (
     <section className="form">
-        <form action="" className="form-recommendation" onSubmit={handleSubmit}>
+        <form className="form-recommendation" onSubmit={handleSubmit}>
             <div className="form-group">
                 <label htmlFor="profession">¿Cuál es tu profesión o trabajo?</label>
                 <input 
@@ -71,9 +70,9 @@ const Form = () => {
                     required
                 />
             </div>
-            <Button
-                text = { loading ? 'Generando Sugerencia...' : 'Generar Sugerencia' }
-            />
+            <button type="submit" className="btn">  
+                { loading ? 'Generando Sugerencia...' : 'Generar Sugerencia' }
+            </button>
         </form>
     </section>
   )
