@@ -45,7 +45,7 @@ def get_ai_recommendation( profession:str, device: str, activity: str ):
         "motivo",
         "precio_estimado"
         "frase_clave"
-        Dentro de componenetes otro objeto json con: cpu, ssd, hdd, gpu, ram.
+        El precio estimado en dolares. Dentro de componenetes otro objeto json con: cpu, ssd, hdd, gpu, ram.
         Si es tipo de dispositivo es desktop debes añadir psu, case y ventilacion.
         En los componentes debes colocar un solo nombre por componente, 
         recuerda solo uno.
