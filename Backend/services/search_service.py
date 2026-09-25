@@ -5,7 +5,7 @@ def get_amazon_products(query: str):
     """
     Busca productos en Amazon y devuelve una lista de productos simplificada.
     """
-    search_api_url = "https://www.searchapi.io/api/v1/search"
+    search_api_url = "https://serpapi.com/search"
     api_key = os.getenv("SEARCHAPI_API_KEY")
 
     # verificacion existencia de api
@@ -14,8 +14,8 @@ def get_amazon_products(query: str):
         return []
 
     params = {
-        "engine": "amazon_search",
-        "q": query,
+        "engine": "amazon",
+        "k": query,
         "api_key": api_key
     }
 
